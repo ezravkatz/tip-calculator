@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+root {
+  --brand: hsl(204.6, 100%, 26.3%);
+  --text: hsl(204.5, 100%, 20.2%);
+  --neutral1: hsl(202.3, 24.5%, 72%);
+  --neutral2: hsl(204.6, 43.8%, 82.5%);
+  --neutral3: hsl(202.3, 77.8%, 91.2%);
+  --neutral4: hsl(204, 45.5%, 91.4%);
+  --white: hsl(179, 41%, 99%);
+}
