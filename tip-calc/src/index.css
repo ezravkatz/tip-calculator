@@ -15,3 +15,8 @@ root {
   --neutral4: hsl(204, 45.5%, 91.4%);
   --white: hsl(179, 41%, 99%);
 }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+}
