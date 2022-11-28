@@ -23,7 +23,9 @@ const Display = () => {
         </div>
       </div>
 
-      <button className="btn">Reset</button>
+      <button className="btn" disabled>
+        Reset
+      </button>
     </div>
   );
 };

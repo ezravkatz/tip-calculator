@@ -17,7 +17,7 @@ root {
 
   /* utils */
 
-  --padding: clamp(2rem, 5vw, 4rem);
+  --padding: clamp(2rem, 4vw, 3.5rem);
 }
 
 body {
@@ -40,4 +40,39 @@ body {
   display: grid;
   grid-auto-flow: column;
   gap: var(--padding);
+}
+
+.btn {
+  font: inherit;
+  background-color: var(--brand);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.8rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  box-shadow: 0 0.2rem 2rem var(--brand), 0 0 0 -0.2rem var(--neutral1),
+    0 0 0 -0.2rem var(--neutral2);
+  transition: box shadow 400ms;
+}
+
+.btn[disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:not([disabled]):hover {
+  box-shadow: 0 0 0 var(--brand), 0 0 0 0.2rem var(--neutral1),
+    0 0 0 5rem var(--brand);
+  background-color: var(--brand);
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0.2rem 2rem var(--brand), 0 0 0 0.2rem var(--neutral1),
+    0 0 0 0.5rem var(--brand);
 }

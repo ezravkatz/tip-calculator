@@ -9,4 +9,67 @@
 
 .display__group {
   display: grid;
+  gap: var(--padding);
+}
+
+.display__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--padding);
+  text-align: left;
+}
+
+display__label {
+  display: grid;
+  justify-items: start;
+}
+.header {
+  color: var(--neutral4);
+  font-size: 1rem;
+}
+
+.unit {
+  color: var(--neutral2);
+  font-size: 0.8rem;
+}
+
+.display__amt {
+  font-size: 2.5rem;
+  color: var(--brand);
+}
+
+.btn {
+  font: inherit;
+  background-color: var(--brand);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.8rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  box-shadow: 0 0.2rem 2rem var(--brand), 0 0 0 -0.2rem var(--neutral1),
+    0 0 0 -0.2rem var(--neutral2);
+  transition: box shadow 400ms;
+}
+
+.btn[disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:not([disabled]):hover {
+  box-shadow: 0 0 0 var(--brand), 0 0 0 0.2rem var(--neutral1),
+    0 0 0 5rem var(--brand);
+  background-color: var(--brand);
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0.2rem 2rem var(--brand), 0 0 0 0.2rem var(--neutral1),
+    0 0 0 0.5rem var(--brand);
 }
