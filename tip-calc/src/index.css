@@ -7,16 +7,37 @@
 }
 
 root {
-  --brand: hsl(204.6, 100%, 26.3%);
+  --brand: hsl(205, 100%, 26%);
   --text: hsl(204.5, 100%, 20.2%);
   --neutral1: hsl(202.3, 24.5%, 72%);
   --neutral2: hsl(204.6, 43.8%, 82.5%);
   --neutral3: hsl(202.3, 77.8%, 91.2%);
   --neutral4: hsl(204, 45.5%, 91.4%);
   --white: hsl(179, 41%, 99%);
+
+  /* utils */
+
+  --padding: clamp(2rem, 5vw, 4rem);
 }
 
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
+  background-color: var(--neutral3);
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  gap: 4rem;
+}
+
+.container {
+  padding: var(--padding);
+  background: var(--white);
+  border-radius: 2rem;
+  box-shadow: 0 4rem 5rem var(--text);
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--padding);
 }

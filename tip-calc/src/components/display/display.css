@@ -1,0 +1,8 @@
+.display {
+  background-color: var(--text);
+  padding: var(--padding);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
