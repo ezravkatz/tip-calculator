@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-root {
+:root {
   --brand: hsl(205, 100%, 26%);
   --text: hsl(204.5, 100%, 20.2%);
   --neutral1: hsl(202.3, 24.5%, 72%);
@@ -22,8 +22,8 @@ root {
 
 body {
   font-family: "Raleway", sans-serif;
-  font-size: 1.5rem;
-  background-color: var(--neutral3);
+  font-size: 2rem;
+  background-color: var(--text);
 }
 
 .wrapper {
@@ -42,7 +42,7 @@ body {
   gap: var(--padding);
 }
 
-.btn {
+.btn[disabled] {
   font: inherit;
   background-color: var(--brand);
   color: var(--white);
@@ -52,8 +52,7 @@ body {
   padding: 0.3rem 0.8rem;
   text-transform: uppercase;
   font-size: 1rem;
-  box-shadow: 0 0.2rem 2rem var(--brand), 0 0 0 -0.2rem var(--neutral1),
-    0 0 0 -0.2rem var(--neutral2);
+  box-shadow: 0 0.2rem 2rem black, 0 0 0 -0.2rem black, 0 0 0 -0.2rem black;
   transition: box shadow 400ms;
 }
 
@@ -67,12 +66,10 @@ body {
 }
 
 .btn:not([disabled]):hover {
-  box-shadow: 0 0 0 var(--brand), 0 0 0 0.2rem var(--neutral1),
-    0 0 0 5rem var(--brand);
-  background-color: var(--brand);
+  box-shadow: 0 0 0 black, 0 0 0 0.2rem black, 0 0 0 5rem black;
+  background-color: var(--neutral3);
 }
 
 .btn:focus-visible {
-  box-shadow: 0 0.2rem 2rem var(--brand), 0 0 0 0.2rem var(--neutral1),
-    0 0 0 0.5rem var(--brand);
+  box-shadow: 0 0.2rem 2rem black, 0 0 0 0.2rem black, 0 0 0 0.5rem black;
 }

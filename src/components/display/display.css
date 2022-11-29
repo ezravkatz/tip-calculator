@@ -1,5 +1,5 @@
-.display {
-  background-color: var(--text);
+#display {
+  background-color: var(--brand);
   padding: var(--padding);
   border-radius: 0.8rem;
   display: flex;
@@ -20,22 +20,24 @@
   text-align: left;
 }
 
-display__label {
+.display__label {
   display: grid;
   justify-items: start;
 }
-.header {
+
+.header,
+.tip__header {
   color: var(--neutral4);
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .unit {
   color: var(--neutral2);
-  font-size: 0.8rem;
+  font-size: 1.3rem;
+  padding: 1rem;
 }
 
 .display__amt {
   font-size: 2.5rem;
-  color: var(--brand);
+  color: var(--neutral2);
 }
-

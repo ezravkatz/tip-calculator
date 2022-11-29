@@ -1,7 +1,7 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 //import images
-import logo from "./assets/images/logo1.png";
+import logo from "./assets/images/logo3.png";
 
 // style
 import "./index.css";
@@ -11,17 +11,19 @@ import Display from "./components/display/Display";
 import Form from "./components/form/Form";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
-    <div className="wrapper">
-      <img src={logo} alt="Tip Calc Logo" />
-      <div className="container">
-        <Form />
-        <Display />
+    <body>
+      <div className="wrapper">
+        <img src={logo} alt="Tip Calc Logo" />
+        <div className="container">
+          <Form />
+          <Display />
+        </div>
+        <div className="display"></div>
       </div>
-      <div className="display"></div>
-    </div>
+    </body>
   );
 }
 
