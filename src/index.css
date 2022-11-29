@@ -1,13 +1,78 @@
-body {
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+root {
+  --brand: hsl(205, 100%, 26%);
+  --text: hsl(204.5, 100%, 20.2%);
+  --neutral1: hsl(202.3, 24.5%, 72%);
+  --neutral2: hsl(204.6, 43.8%, 82.5%);
+  --neutral3: hsl(202.3, 77.8%, 91.2%);
+  --neutral4: hsl(204, 45.5%, 91.4%);
+  --white: hsl(179, 41%, 99%);
+
+  /* utils */
+
+  --padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--neutral3);
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  gap: 4rem;
+}
+
+.container {
+  padding: var(--padding);
+  background: var(--white);
+  border-radius: 2rem;
+  box-shadow: 0 4rem 5rem var(--text);
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--padding);
+}
+
+.btn {
+  font: inherit;
+  background-color: var(--brand);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.8rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  box-shadow: 0 0.2rem 2rem var(--brand), 0 0 0 -0.2rem var(--neutral1),
+    0 0 0 -0.2rem var(--neutral2);
+  transition: box shadow 400ms;
+}
+
+.btn[disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:not([disabled]):hover {
+  box-shadow: 0 0 0 var(--brand), 0 0 0 0.2rem var(--neutral1),
+    0 0 0 5rem var(--brand);
+  background-color: var(--brand);
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0.2rem 2rem var(--brand), 0 0 0 0.2rem var(--neutral1),
+    0 0 0 0.5rem var(--brand);
 }
