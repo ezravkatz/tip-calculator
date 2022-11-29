@@ -18,11 +18,13 @@
   /* utils */
 
   --padding: clamp(2rem, 4vw, 3.5rem);
+  --padding-lg: clamp(4rem, 7vw, 6.5rem);
 }
 
 body {
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
+  padding-block: var(--padding-lg);
   background-color: var(--text);
 }
 
@@ -30,11 +32,13 @@ body {
   display: grid;
   place-items: center;
   gap: 4rem;
+  margin-inline: auto;
+  max-width: 1080px;
 }
 
 .container {
   padding: var(--padding);
-  background: var(--white);
+  background: var(--neutral4);
   border-radius: 2rem;
   box-shadow: 0 4rem 5rem var(--text);
   display: grid;
@@ -72,4 +76,12 @@ body {
 
 .btn:focus-visible {
   box-shadow: 0 0.2rem 2rem black, 0 0 0 0.2rem black, 0 0 0 0.5rem black;
+}
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-auto-flow: column;
+  }
 }

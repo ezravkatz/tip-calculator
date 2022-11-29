@@ -1,18 +1,26 @@
 import React from "react";
 
+import "./form.css";
+
 //icons
 import { FaDollarSign } from "react-icons/fa";
+import { SlPeople } from "react-icons/sl";
 
 const Form = () => {
   return (
     <div className="form">
       <div className="label__group">
-        <label classname="label" htmlFor="bill">
-          Bill
-        </label>
-        <input type="number" id="bill" />
-        <div className="icon" aria-hidden="true">
-          <FaDollarSign />
+        <div className="label__wrapper">
+          <label classname="label" htmlFor="bill">
+            Bill
+          </label>
+        </div>
+        <p classname="error"></p>
+        <div className="number__wrapper">
+          <input type="text" classname="number__input" id="bill" />
+          <div className="icon" aria-hidden="true">
+            <FaDollarSign />
+          </div>
         </div>
       </div>
 
@@ -45,8 +53,18 @@ const Form = () => {
       </div>
 
       <div className="label__group">
-        <label htmlFor="diners">Bill</label>
-        <input type="number" id="diners" />
+        <div className="label__wrapper">
+          <label classname="label" htmlFor="diners">
+            Number of Diners
+          </label>
+        </div>
+        <p classname="error"></p>
+        <div className="number__wrapper">
+          <input type="text" classname="number__input" id="diners" />
+          <div className="icon" aria-hidden="true">
+            <SlPeople />
+          </div>
+        </div>
       </div>
     </div>
   );

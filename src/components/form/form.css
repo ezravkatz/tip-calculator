@@ -1,0 +1,125 @@
+.form {
+  display: grid;
+  gap: var(--padding);
+}
+
+.label__group {
+  display: grid;
+  text-align: left;
+  gap: 0.2rem;
+}
+
+.label {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.number__wrapper {
+  position: relative;
+}
+
+[type="text"] {
+  width: 100%;
+  font: inherit;
+  text-align: right;
+  background-color: var(--white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 -0.2rem black, 0 0 0 -0.2rem black;
+  transition: box shadow 400ms;
+}
+
+[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--white), 0 0 0 0.4rem var(--text);
+  background-color: var(--neutral3);
+}
+
+[type="text"]:invalid {
+  outline: none;
+  background-color: darkred;
+  box-shadow: 0 0 0 0.2rem var(--white), 0 0 0 0.4rem var(--text);
+  background-color: var(--neutral3);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-40%);
+  pointer-events: none;
+}
+
+/* remove arrows */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.label__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error {
+  color: darkred;
+  font-size: 1rem;
+}
+
+.tip-section {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.tip-amount__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.tip__amount {
+  position: relative;
+}
+
+[name="tip"] {
+  opacity: 0;
+  inset: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+[name="tip"]:hover + .tip__btn {
+  background-color: var(--neutral2);
+  color: var(--brand);
+}
+
+[name="tip"]:checked + .tip__btn {
+  background-color: var(--neutral1);
+  color: var(--white);
+}
+
+.tip__btn {
+  background-color: var(--text);
+  color: var(--white);
+  border-radius: 0.4rem;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
+  .tip-amount__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
