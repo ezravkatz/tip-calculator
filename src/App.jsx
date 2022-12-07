@@ -18,12 +18,20 @@ function App() {
   const [isTipSelected, setIsTipSelected] = useState(false);
   const [selectedTip, setSelectedTip] = useState(0);
   const [showDinersError, setShowDinersError] = useState(false);
+  const [calculatedTip, setCalculatedTip] = useState("");
+  const [calculatedTotal, setCalculatedTotal] = useState("");
+
+  function calculateTip() {
+    setCalculatedTip((billAmt * selectedTip) / diners);
+    console.log(calculatedTip);
+  }
 
   function handleBillAmtInput(e) {
     const input = e.target.value;
     //TO DO fix regex pattern
     // const pattern = /^[0-9]+(\.[0-9][0-9])?$/;
     setBillAmt(input);
+    calculateTip();
     //   if (pattern.test(input)) {
     //     setShowBillAmtError(false);
     //   } else {
