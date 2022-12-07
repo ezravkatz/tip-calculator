@@ -6,7 +6,12 @@ import "./form.css";
 import { FaDollarSign } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
 
-const Form = () => {
+const Form = ({
+  handleBillAmtInput,
+  billAmt,
+  handleSelectedTip,
+  showBillAmtError,
+}) => {
   return (
     <div className="form">
       <div className="label__group">
@@ -15,9 +20,17 @@ const Form = () => {
             Bill
           </label>
         </div>
-        <p classname="error"></p>
+        <p classname="error">
+          {showBillAmtError ? "Please enter a valid bill amount" : ""}
+        </p>
         <div className="number__wrapper">
-          <input type="text" classname="number__input" id="bill" />
+          <input
+            type="text"
+            classname="number__input"
+            id="bill"
+            onInput={handleBillAmtInput}
+            value={billAmt}
+          />
           <div className="icon" aria-hidden="true">
             <FaDollarSign />
           </div>
