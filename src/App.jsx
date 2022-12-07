@@ -20,10 +20,11 @@ function App() {
 
   function handleBillAmtInput(e) {
     const input = e.target.value;
-    const pattern = /^\d{1, 6}+(\.[0-9][0-9])?$/;
+    //TO DO fix regex pattern
+    const pattern = /^[0-9]+(\.[0-9][0-9])?$/;
+    setBillAmt(input);
     if (pattern.test(input)) {
       setShowBillAmtError(false);
-      setBillAmt(input);
     } else {
       setShowBillAmtError(true);
     }
@@ -43,6 +44,7 @@ function App() {
             handleBillAmtInput={handleBillAmtInput}
             handleSelectedTip={handleSelectedTip}
             showBillAmtError={showBillAmtError}
+            setShowBillAmtError={setShowBillAmtError}
           />
           <Display />
         </div>

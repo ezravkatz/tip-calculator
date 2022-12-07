@@ -11,6 +11,7 @@ const Form = ({
   billAmt,
   handleSelectedTip,
   showBillAmtError,
+  setShowBillAmtError,
 }) => {
   return (
     <div className="form">
@@ -20,9 +21,9 @@ const Form = ({
             Bill
           </label>
         </div>
-        <p classname="error">
-          {showBillAmtError ? "Please enter a valid bill amount" : ""}
-        </p>
+        <div className="error">
+          <p>{showBillAmtError ? "Please enter a valid bill amount" : ""}</p>
+        </div>
         <div className="number__wrapper">
           <input
             type="text"

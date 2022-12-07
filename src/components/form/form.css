@@ -35,12 +35,12 @@
   background-color: var(--neutral3);
 }
 
-[type="text"]:invalid {
+/* [type="text"]:invalid {
   outline: none;
   background-color: darkred;
   box-shadow: 0 0 0 0.2rem var(--white), 0 0 0 0.4rem var(--text);
   background-color: var(--neutral3);
-}
+} */
 
 .icon {
   position: absolute;
@@ -71,8 +71,10 @@ input[type="number"] {
 }
 
 .error {
-  color: darkred;
+  color: red;
   font-size: 1rem;
+  text-align: right;
+  margin-bottom: 1rem;
 }
 
 .tip-section {
