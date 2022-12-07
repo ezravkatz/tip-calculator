@@ -11,7 +11,10 @@ const Form = ({
   billAmt,
   handleSelectedTip,
   showBillAmtError,
-  setShowBillAmtError,
+  selectedTip,
+  handleDinersInput,
+  diners,
+  showDinersError,
 }) => {
   return (
     <div className="form">
@@ -42,23 +45,48 @@ const Form = ({
         <p classname="label">Seleted Tip %</p>
         <div className="tip-amount__wrapper">
           <div className="tip__amount">
-            <input type="radio" name="tip" value=".15" />
+            <input
+              type="radio"
+              onChange={handleSelectedTip}
+              name="tip"
+              value=".15"
+            />
             <div className="tip__btn">15%</div>
           </div>
           <div className="tip__amount">
-            <input type="radio" name="tip" value=".20" />
+            <input
+              type="radio"
+              onChange={handleSelectedTip}
+              name="tip"
+              value=".20"
+            />
             <div className="tip__btn">20%</div>
           </div>
           <div className="tip__amount">
-            <input type="radio" name="tip" value=".25" />
+            <input
+              type="radio"
+              onChange={handleSelectedTip}
+              name="tip"
+              value=".25"
+            />
             <div className="tip__btn">25%</div>
           </div>
           <div className="tip__amount">
-            <input type="radio" name="tip" value=".30" />
+            <input
+              type="radio"
+              onChange={handleSelectedTip}
+              name="tip"
+              value=".30"
+            />
             <div className="tip__btn">30%</div>
           </div>
           <div className="tip__amount">
-            <input type="radio" name="tip" value=".5" />
+            <input
+              type="radio"
+              onChange={handleSelectedTip}
+              name="tip"
+              value=".5"
+            />
             <div className="tip__btn">50%</div>
           </div>
 
@@ -72,9 +100,17 @@ const Form = ({
             Number of Diners
           </label>
         </div>
-        <p classname="error"></p>
+        <div className="error">
+          <p>{showDinersError ? "Please enter whole numbers only" : ""}</p>
+        </div>
         <div className="number__wrapper">
-          <input type="text" classname="number__input" id="diners" />
+          <input
+            type="text"
+            classname="number__input"
+            id="diners"
+            onInput={handleDinersInput}
+            value={diners}
+          />
           <div className="icon" aria-hidden="true">
             <SlPeople />
           </div>
