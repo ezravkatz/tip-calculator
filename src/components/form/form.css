@@ -35,6 +35,23 @@
   background-color: var(--neutral3);
 }
 
+[type="number"] {
+  width: 100%;
+  font: inherit;
+  text-align: right;
+  background-color: var(--white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 -0.2rem black, 0 0 0 -0.2rem black;
+  transition: box shadow 400ms;
+}
+
+[type="number"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--white), 0 0 0 0.4rem var(--text);
+  background-color: var(--neutral3);
+}
+
 /* [type="text"]:invalid {
   outline: none;
   background-color: darkred;
@@ -90,6 +107,7 @@ input[type="number"] {
 
 .tip__amount {
   position: relative;
+  display: grid;
 }
 
 [name="tip"] {

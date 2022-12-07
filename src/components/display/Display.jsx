@@ -1,7 +1,14 @@
 import React from "react";
 import "./display.css";
 
-const Display = () => {
+const Display = (calculatedTip, total) => {
+  const returnCurrencyAmt = (amt) => {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(amt);
+  };
+
   return (
     <div id="display">
       <div className="display__row">
@@ -10,7 +17,7 @@ const Display = () => {
           <p className="unit">/ Person</p>
         </div>
 
-        <p className="display__amt">$0.00</p>
+        <p className="display__amt">{returnCurrencyAmt("")}</p>
       </div>
       <div className="display__row">
         <div className="display__label">

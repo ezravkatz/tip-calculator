@@ -7,13 +7,15 @@ import { FaDollarSign } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
 
 const Form = ({
-  handleBillAmtInput,
+  // handleBillAmtInput,
   billAmt,
+  setBillAmt,
   handleSelectedTip,
   showBillAmtError,
   selectedTip,
-  handleDinersInput,
+  // handleDinersInput,
   diners,
+  setDiners,
   showDinersError,
 }) => {
   return (
@@ -29,11 +31,10 @@ const Form = ({
         </div>
         <div className="number__wrapper">
           <input
-            type="text"
+            type="number"
             classname="number__input"
             id="bill"
-            onInput={handleBillAmtInput}
-            value={billAmt}
+            onInput={(e) => setBillAmt(+e.target.value)}
           />
           <div className="icon" aria-hidden="true">
             <FaDollarSign />
@@ -47,50 +48,64 @@ const Form = ({
           <div className="tip__amount">
             <input
               type="radio"
-              onChange={handleSelectedTip}
+              onInput={handleSelectedTip}
               name="tip"
-              value=".15"
+              value="15"
             />
-            <div className="tip__btn">15%</div>
+            <label className="tip__btn" htmlFor="input1" id="input1">
+              15%
+            </label>
           </div>
           <div className="tip__amount">
             <input
               type="radio"
-              onChange={handleSelectedTip}
+              onInput={handleSelectedTip}
               name="tip"
-              value=".20"
+              value="20"
             />
-            <div className="tip__btn">20%</div>
+            <label className="tip__btn" htmlFor="input2" id="input2">
+              20%
+            </label>
           </div>
           <div className="tip__amount">
             <input
               type="radio"
-              onChange={handleSelectedTip}
+              onInput={handleSelectedTip}
               name="tip"
-              value=".25"
+              value="25"
             />
-            <div className="tip__btn">25%</div>
+            <label className="tip__btn" htmlFor="input3" id="input3">
+              25%
+            </label>
           </div>
           <div className="tip__amount">
             <input
               type="radio"
-              onChange={handleSelectedTip}
+              onInput={handleSelectedTip}
               name="tip"
-              value=".30"
+              value="30"
             />
-            <div className="tip__btn">30%</div>
+            <label className="tip__btn" htmlFor="input4" id="input4">
+              30%
+            </label>
           </div>
           <div className="tip__amount">
             <input
               type="radio"
-              onChange={handleSelectedTip}
+              onInput={handleSelectedTip}
               name="tip"
-              value=".5"
+              value="5"
             />
-            <div className="tip__btn">50%</div>
+            <label className="tip__btn" htmlFor="input5" id="input5">
+              50%
+            </label>
           </div>
 
-          <input type="number" className="tip__custom" />
+          <input
+            type="number"
+            onInput={handleSelectedTip}
+            className="tip__custom"
+          />
         </div>
       </div>
 
@@ -108,8 +123,7 @@ const Form = ({
             type="text"
             classname="number__input"
             id="diners"
-            onInput={handleDinersInput}
-            value={diners}
+            onInput={(e) => setDiners(+e.target.value)}
           />
           <div className="icon" aria-hidden="true">
             <SlPeople />
