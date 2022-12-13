@@ -1,9 +1,9 @@
 import React from "react";
 import "./display.css";
 
-const Display = (calculatedTip, total) => {
+const Display = (calculatedTip, total, diners, handleResetBtn) => {
   const returnCurrencyAmt = (amt) => {
-    return new Intl.NumberFormat("en-US", {
+    new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
     }).format(amt);
@@ -17,7 +17,9 @@ const Display = (calculatedTip, total) => {
           <p className="unit">/ Person</p>
         </div>
 
-        <p className="display__amt">{returnCurrencyAmt("")}</p>
+        <p className="display__amt">
+          {returnCurrencyAmt(`${calculatedTip ? calculatedTip / diners : "0"}`)}
+        </p>
       </div>
       <div className="display__row">
         <div className="display__label">
@@ -25,12 +27,20 @@ const Display = (calculatedTip, total) => {
           <p className="unit">/ Person</p>
         </div>
 
-        <p className="display__amt">$0.00</p>
+        <p className="display__amt">
+          {returnCurrencyAmt(`${total ? total / diners : "0"}`)}
+        </p>
       </div>
-
-      <button className="btn" disabled>
-        Reset
-      </button>
+      {total ? (
+        <button className="btn" onClick={handleResetBtn}>
+          Reset
+        </button>
+      ) : (
+        <button className="btn" disabled>
+          {" "}
+          Reset
+        </button>
+      )}
     </div>
   );
 };
