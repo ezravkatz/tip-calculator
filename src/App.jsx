@@ -13,12 +13,27 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function App() {
+  const [bill, setBill] = useState("");
+  const [tip, setTip] = useState("");
+  const [diners, setDiners] = useState("");
+
+  useEffect(() => {
+    console.table({ bill, diners, tip });
+  }, [bill, diners, tip]);
+
   return (
     <body>
       <div className="wrapper">
-        <img src={logo} alt="Tip Calc Logo" />
+        <img src={logo} alt="bill Calc Logo" />
         <div className="container">
-          <Form />
+          <Form
+            bill={bill}
+            setBill={setBill}
+            tip={tip}
+            setTip={setTip}
+            diners={diners}
+            setDiners={setDiners}
+          />
           <Display />
         </div>
         <div className="display"></div>
