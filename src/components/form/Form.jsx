@@ -20,7 +20,7 @@ const Form = ({ bill, setBill, tip, setTip, diners, setDiners }) => {
           </label>
         </div>
         <div className="error">
-          <p>Error </p>
+          <p> </p>
         </div>
         <div className="number__wrapper">
           <input
@@ -94,7 +94,11 @@ const Form = ({ bill, setBill, tip, setTip, diners, setDiners }) => {
             </label>
           </div>
 
-          <input type="number" className="tip__custom" />
+          <input
+            type="number"
+            className="tip__custom"
+            onInput={handleSelectedTip}
+          />
         </div>
       </div>
 
@@ -105,11 +109,11 @@ const Form = ({ bill, setBill, tip, setTip, diners, setDiners }) => {
           </label>
         </div>
         <div className="error">
-          <p>Error</p>
+          <p></p>
         </div>
         <div className="number__wrapper">
           <input
-            type="text"
+            type="number"
             className="number__input"
             id="diners"
             onInput={(e) => setDiners(+e.target.value)}

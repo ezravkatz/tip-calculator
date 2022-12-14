@@ -1,5 +1,3 @@
-// import { useState } from "react";
-
 //import images
 import logo from "./assets/images/logo3.png";
 
@@ -13,13 +11,27 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function App() {
-  const [bill, setBill] = useState("");
-  const [tip, setTip] = useState("");
-  const [diners, setDiners] = useState("");
+  const [bill, setBill] = useState(0);
+  const [tip, setTip] = useState(0);
+  const [diners, setDiners] = useState(0);
+  const [calculatedTip, setCalculatedTip] = useState(0);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     console.table({ bill, diners, tip });
-  }, [bill, diners, tip]);
+    if (bill > 0 && diners > 0 && tip > 0) {
+      setCalculatedTip(bill * (tip / 100));
+      setTotal(calculatedTip + bill);
+    }
+  }, [bill, diners, tip, calculatedTip]);
+
+  const handleResetBtn = (e) => {
+    setBill(0);
+    setTip(0);
+    setDiners(0);
+    setCalculatedTip(0);
+    setTotal(0);
+  };
 
   return (
     <body>
@@ -34,7 +46,12 @@ function App() {
             diners={diners}
             setDiners={setDiners}
           />
-          <Display />
+          <Display
+            total={total}
+            calculatedTip={calculatedTip}
+            handleResetBtn={handleResetBtn}
+            diners={diners}
+          />
         </div>
         <div className="display"></div>
       </div>

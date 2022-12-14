@@ -1,9 +1,9 @@
 import React from "react";
 import "./display.css";
 
-const Display = (calculatedTip, total, diners, handleResetBtn) => {
+const Display = ({ calculatedTip, total, diners, handleResetBtn }) => {
   const returnCurrencyAmt = (amt) => {
-    new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
     }).format(amt);
@@ -37,7 +37,6 @@ const Display = (calculatedTip, total, diners, handleResetBtn) => {
         </button>
       ) : (
         <button className="btn" disabled>
-          {" "}
           Reset
         </button>
       )}
