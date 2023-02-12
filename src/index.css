@@ -97,10 +97,8 @@ body {
   .form {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    column-count: 1;
     max-width: 18rem;
-    align-items: flex-start;
-    margin-right: 3rem;
   }
 
   #display {
@@ -127,7 +125,11 @@ body {
   .logo {
     height: 13rem;
     width: 13rem;
-    margin-left: 4.5rem;
-    margin-top: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 10rem;
   }
 }
