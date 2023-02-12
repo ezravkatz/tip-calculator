@@ -33,11 +33,18 @@ body {
 }
 
 .wrapper {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
-  margin-inline: auto;
   max-width: 1080px;
+  margin-bottom: 27rem;
+}
+
+.logo {
+  height: 20rem;
+  width: 20rem;
 }
 
 .container {
@@ -79,7 +86,7 @@ body {
 }
 
 .btn:focus-visible {
-  box-shadow: 0 0.2rem 2rem black, 0 0 0 0.2rem black, 0 0 0 0.5rem black;
+  box-shadow: 0 0.2rem 2rem black, 0 0 0 0.2rem black, 0 0 0 0.3rem black;
 }
 
 /* media queries */

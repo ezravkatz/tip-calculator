@@ -36,7 +36,7 @@ function App() {
   return (
     <body>
       <div className="wrapper">
-        <img src={logo} alt="bill Calc Logo" />
+        <img className="logo" src={logo} alt="bill Calc Logo" />
         <div className="container">
           <Form
             bill={bill}
