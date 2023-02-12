@@ -13,7 +13,7 @@ import { useEffect } from "react";
 function App() {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
-  const [diners, setDiners] = useState(0);
+  const [diners, setDiners] = useState("");
   const [calculatedTip, setCalculatedTip] = useState(0);
   const [total, setTotal] = useState(0);
 
@@ -28,7 +28,7 @@ function App() {
   const handleResetBtn = (e) => {
     setBill(0);
     setTip(0);
-    setDiners(0);
+    setDiners("");
     setCalculatedTip(0);
     setTotal(0);
   };

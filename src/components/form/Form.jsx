@@ -19,9 +19,7 @@ const Form = ({ bill, setBill, tip, setTip, diners, setDiners }) => {
             Bill
           </label>
         </div>
-        <div className="error">
-          <p> </p>
-        </div>
+
         <div className="number__wrapper">
           <input
             type="number"
@@ -87,7 +85,7 @@ const Form = ({ bill, setBill, tip, setTip, diners, setDiners }) => {
               type="radio"
               onInput={handleSelectedTip}
               name="tip"
-              value="5"
+              value="50"
             />
             <label className="tip__btn" htmlFor="input5" id="input5">
               50%
@@ -108,13 +106,11 @@ const Form = ({ bill, setBill, tip, setTip, diners, setDiners }) => {
             Number of Diners
           </label>
         </div>
-        <div className="error">
-          <p></p>
-        </div>
+        <p className="error"> {diners === 0 ? "Can't be zero" : " "} </p>
         <div className="number__wrapper">
           <input
             type="number"
-            className="number__input"
+            className={`number__input ${diners === 0 ? "number-error" : ""}`}
             id="diners"
             onInput={(e) => setDiners(+e.target.value)}
           />

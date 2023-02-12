@@ -14,8 +14,28 @@
   font-size: 1rem;
 }
 
+.custom__wrapper {
+  position: relative;
+}
+
+.tip__custom__label {
+  position: absolute;
+}
+
+.tip__custom::placeholder {
+  opacity: 0;
+}
+
+.tip__custom::placeholder-shown + .tip__custom__label {
+  opacity: 0;
+}
+
 .number__wrapper {
   position: relative;
+}
+
+.number__input.error:focus {
+  box-shadow: 0 0 0 0.2rem darkred;
 }
 
 [type="text"] {

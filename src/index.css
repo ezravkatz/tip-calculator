@@ -50,7 +50,7 @@ body {
   gap: var(--padding);
 }
 
-.btn[disabled] {
+.btn {
   font: inherit;
   background-color: var(--brand);
   color: var(--white);
@@ -74,7 +74,7 @@ body {
 }
 
 .btn:not([disabled]):hover {
-  box-shadow: 0 0 0 black, 0 0 0 0.2rem black, 0 0 0 5rem black;
+  box-shadow: 0 0 0 var(--brand), 0 0 0 0.2rem black, 0 0 0 0.5rem var(--text);
   background-color: var(--neutral3);
 }
 
