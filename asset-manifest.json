@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ezravkatz/tip-calculator/static/css/main.f2f05c59.css",
+    "main.js": "/ezravkatz/tip-calculator/static/js/main.a74407d4.js",
+    "static/media/logo3.png": "/ezravkatz/tip-calculator/static/media/logo3.cec492fd31b46975ef1d.png",
+    "index.html": "/ezravkatz/tip-calculator/index.html",
+    "main.f2f05c59.css.map": "/ezravkatz/tip-calculator/static/css/main.f2f05c59.css.map",
+    "main.a74407d4.js.map": "/ezravkatz/tip-calculator/static/js/main.a74407d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2f05c59.css",
+    "static/js/main.a74407d4.js"
+  ]
+}
