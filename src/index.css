@@ -100,7 +100,7 @@ body {
     flex-wrap: wrap;
     max-width: 18rem;
     align-items: flex-start;
-    margin-right: 6rem;
+    margin-right: 3rem;
   }
 
   #display {
@@ -127,7 +127,7 @@ body {
   .logo {
     height: 13rem;
     width: 13rem;
-    margin-left: 2.5rem;
-    margin-top: 6rem;
+    margin-left: 4.5rem;
+    margin-top: 11rem;
   }
 }
