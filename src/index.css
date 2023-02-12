@@ -125,11 +125,7 @@ body {
   .logo {
     height: 13rem;
     width: 13rem;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    justify-content: center;
-    align-self: center;
-    margin-top: 10rem;
+    position: relative;
+    top: 3rem;
   }
 }
