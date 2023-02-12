@@ -91,8 +91,43 @@ body {
 
 /* media queries */
 
-@media screen and (min-width: 768px) {
-  .container {
-    grid-auto-flow: column;
+@media screen and (max-width: 480px) {
+  .container,
+  .wrapper,
+  .form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 18rem;
+    align-items: flex-start;
+    margin-right: 6rem;
+  }
+
+  #display {
+    max-width: 15rem;
+  }
+
+  .display__amt {
+    font-weight: 100;
+    position: absolute;
+    margin-left: 6rem;
+    margin-top: 2.8rem;
+  }
+
+  .total__container {
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+  }
+
+  .unit {
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+  }
+
+  .logo {
+    height: 13rem;
+    width: 13rem;
+    margin-left: 2.5rem;
+    margin-top: 6rem;
   }
 }

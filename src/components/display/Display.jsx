@@ -13,7 +13,7 @@ const Display = ({ calculatedTip, total, diners, handleResetBtn }) => {
     <div id="display">
       <div className="display__row">
         <div className="display__label">
-          <p className="tip__header">Tip Amount</p>
+          <p className="total__container">Tip Amount</p>
           <p className="unit">/ Person</p>
         </div>
 
@@ -23,7 +23,7 @@ const Display = ({ calculatedTip, total, diners, handleResetBtn }) => {
       </div>
       <div className="display__row">
         <div className="display__label">
-          <p className="header"> Total</p>
+          <p className="total__container"> Total</p>
           <p className="unit">/ Person</p>
         </div>
 
@@ -32,7 +32,7 @@ const Display = ({ calculatedTip, total, diners, handleResetBtn }) => {
         </p>
       </div>
       {total ? (
-        <button className="btn" onClick={handleResetBtn}>
+        <button className="reset__btn" onClick={handleResetBtn}>
           Reset
         </button>
       ) : (
